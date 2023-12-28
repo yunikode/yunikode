@@ -1,5 +1,5 @@
 {
-  "name": "yunikode_homepage",
+  "name": "",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
-    "astro": "^4.0.7",
+    "astro": "^4.0.8",
     "typescript": "^5.3.3"
   }
 }
