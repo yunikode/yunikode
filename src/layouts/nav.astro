@@ -1,0 +1,52 @@
+---
+
+---
+
+<header class="header" id="header">
+  <nav class="nav container">
+    <div class="nav__logo"><a href="/">Fiona / @yunikode</a></div>
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="/about" class="nav__link">
+            <i class="uil uil-user nav__icon"></i> About
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="/skills" class="nav__link">
+            <i class="uil uil-file-alt nav__icon"></i> Skills
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a href="/experience" class="nav__link">
+            <i class="uil uil-constructor nav__icon"></i> Experience
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="/portfolio" class="nav__link">
+            <i class="uil uil-scenery nav__icon"></i> Portfolio
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="/experiments" class="nav__link">
+            <i class="uil uil-flask nav__icon"></i> Experiments
+          </a>
+        </li>
+        
+      </ul>
+      <i class="uil uil-times nav__close" id="nav-close"></i>
+    </div>
+    <div class="nav__btns">
+      <i
+        class="uil"
+        :class="darkMode ? 'uil-sun':'uil-moon'"
+        id="theme-button"
+        @click="darkMode = !darkMode"></i>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="uil uil-apps"></i>
+      </div>
+    </div>
+  </nav>
+</header>

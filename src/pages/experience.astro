@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/base.astro";
+import Timeline from "../components/timeline.astro";
+---
+
+<BaseLayout>
+  <!--==================== QUALIFICATION ====================-->
+  <section class="qualification section" id="experience">
+    <div class="center__wrapper">
+      <h2 class="section__title">Experience</h2>
+      <span class="section__subtitle">My personal Journey</span>
+
+      <div class="qualification__container container">
+        <div class="qualification__sections">
+          <div class="qualification__content">
+            <Timeline
+              title="IT Apprenticeship"
+              subtitle="Bahlo EDV, Tübingen"
+              time="September 2006 - February 2009"
+              index="0"
+            />
+            <Timeline
+              title="Technician / Sys-Admin"
+              subtitle="Bahlo EDV, Tübingen"
+              time="February 2009 - March 2010"
+              index="1"
+            />
+            <Timeline
+              title="`The IT-Guy`"
+              subtitle="Freelancer, NZ / AU / UK / CA"
+              time="April 2010 - April 2019"
+              index="2"
+            />
+            <Timeline
+              title="Junior Developer"
+              subtitle="antwerpes AG, Cologne"
+              time="April 2019 - May 2021"
+              index="3"
+            />
+            <Timeline
+              title="Developer"
+              subtitle="antwerpes AG, Cologne"
+              time="June - October 2021"
+              index="4"
+            />
+            <Timeline
+              title="Specialist Developer"
+              subtitle="denkwerk, Cologne"
+              time="January 2022 - now"
+              index="5"
+              isLast
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

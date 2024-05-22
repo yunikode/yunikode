@@ -1,0 +1,46 @@
+---
+import Nav from "./nav.astro";
+import Footer from "./footer.astro";
+import Contact from "../components/contact.astro";
+const { title } = Astro.props;
+---
+
+<html
+  lang="en"
+  x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
+  x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
+  x-bind:class="{ 'dark': darkMode }"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;500;600&family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <title>yunikode - {title}</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body
+    x-data="{ 'showModal': false }"
+    @keydown.escape="showModal = false"
+    x-cloak
+    x-bind:class="dark ? 'dark':''"
+  >
+    <Nav />
+    <h1>{title}</h1>
+    <article>
+      <slot />
+      <!-- your content is injected here -->
+    </article>
+    <Contact />
+    <Footer />
+  </body>
+</html>

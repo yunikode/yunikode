@@ -1,0 +1,38 @@
+---
+const { title, subtitle, time, index, isLast = false } = Astro.props;
+---
+
+<div class="qualification__data">
+  {
+    index % 2 == 0 ? (
+      <div>
+        <p class="text-xl font-body">{title}</p>
+        <p class="text-sm">{subtitle}</p>
+        <div class="pt-2 text-sm font-button">
+          <i class="uil uil-calendar-alt" />
+          {time}
+        </div>
+      </div>
+    ) : (
+      <div />
+    )
+  }
+  <div>
+    <span class="qualification__rounder"></span>
+    {!isLast && <span class="qualification__line" />}
+  </div>
+  {
+    index % 2 == 1 ? (
+      <div>
+        <p class="text-xl font-body">{title}</p>
+        <p class="text-sm">{subtitle}</p>
+        <div class="pt-2 text-sm font-button">
+          <i class="uil uil-calendar-alt" />
+          {time}
+        </div>
+      </div>
+    ) : (
+      <div />
+    )
+  }
+</div>

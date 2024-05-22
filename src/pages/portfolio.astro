@@ -1,0 +1,272 @@
+---
+import BaseLayout from "../layouts/base.astro";
+import Carousel from "../components/carousel.astro";
+import Modal from "../components/modal.astro";
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
+---
+
+<BaseLayout>
+  <!--==================== PORTFOLIO ====================-->
+  <section class="portfolio section" id="portfolio">
+    <div class="center__wrapper">
+      <h2 class="section__title">Portfolio</h2>
+      <span class="section__subtitle">Most recent work</span>
+      <Carousel projects={projects}/>
+      <!--  
+      <div class="portfolio__container container swiper">
+        <div class="swiper-wrapper">
+          <div class="portfolio__content grid swiper-slide">
+            <img
+              src="assets/img/portfolio1.png"
+              alt=""
+              class="portfolio__img"
+            />
+
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">mein ms-life</h3>
+              <p class="portfolio__description">
+                Community platform for people living with multiple sclerosis.
+              </p>
+              <div class="container--center">
+                <span
+                  class="button button--flex button--small modal__button"
+                  data-target-modal="modal01"
+                  >Details
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__content grid swiper-slide">
+            <img
+              src="assets/img/portfolio2.png"
+              alt=""
+              class="portfolio__img"
+            />
+
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">Freestyle plus Ich</h3>
+              <p class="portfolio__description">
+                Community platform for people living with diabetes.
+              </p>
+              <div class="container--center">
+                <span
+                  class="button button--flex button--small modal__button"
+                  data-target-modal="modal02"
+                  >Details
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__content grid swiper-slide">
+            <img
+              src="assets/img/portfolio3.png"
+              alt=""
+              class="portfolio__img"
+            />
+
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">Sprechender Beipackzettel</h3>
+              <p class="portfolio__description">
+                A Google Actions application that will answer questions to a
+                specific medication based on the information given by the
+                directions of use.
+              </p>
+              <div class="container--center">
+                <span
+                  class="button button--flex button--small modal__button"
+                  data-target-modal="modal03"
+                  >Details
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next">
+          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+-->
+      <div class="general__modal" id="modal01">
+        <div class="general__modal-content">
+          <h4 class="general__modal-title">mein ms-life</h4>
+          <i class="uil uil-times general__modal-close"></i>
+          <div class="general__modal-desc">
+            I became the lead developer after the relaunch of the page.<br /><br
+            />During this time I refactored the application to a microfrontend
+            architecture to accomodate the feature requests that came after the
+            relaunch.
+          </div>
+          <div class="spacer--buttons">
+            <a
+              href="https://mein.ms-life.de/"
+              target="_blank"
+              class="button button--small button--flex"
+              >Live here<i class="uil uil-external-link-alt button__icon"></i>
+            </a>
+          </div>
+          <div class="container--flex mx-1">
+            <div>
+              <span class="general__modal-subtitle">Tech Stack</span>
+              <ul class="general__modal-experiments grid">
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>WordPress in headless mode</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>GatsbyJS (SSG + SSR + CSR)</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Styled Components / Redux Saga / Framer Motion</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>AR Applications</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Custom Backend</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <span class="general__modal-subtitle">Challenges</span>
+              <ul class="general__modal-experiments grid">
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Adapting the buildprocess</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Feature Creep</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="general__modal" id="modal02">
+        <div class="general__modal-content">
+          <h4 class="general__modal-title">Freestyle plus Ich</h4>
+          <i class="uil uil-times general__modal-close"></i>
+          <div class="general__modal-desc">
+            I was in charge of a major redesign and implementing services from
+            other partners.
+          </div>
+          <div class="spacer--buttons">
+            <a
+              href="https://mein.freestyle.de/content/"
+              target="_blank"
+              class="button button--small button--flex"
+              >Live here<i class="uil uil-external-link-alt button__icon"
+              ></i></a
+            >
+          </div>
+          <div class="container--flex mx-1">
+            <div>
+              <span class="general__modal-subtitle">Tech Stack</span>
+              <ul class="general__modal-experiments grid">
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Drupal CMS</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>GatsbyJS (SSG + SSR)</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Styled Components / Redux Saga</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Custom Backend</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>External services</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <span class="general__modal-subtitle">Challenges</span>
+              <ul class="general__modal-experiments grid">
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Coordination of partners involved</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Interplay of different architectures</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="general__modal" id="modal03">
+        <div class="general__modal-content">
+          <h4 class="general__modal-title">Sprechender Beipackzettel</h4>
+          <i class="uil uil-times general__modal-close"></i>
+          <div class="general__modal-desc">
+            My biggest job in this project was to implement the API between
+            Google Assistant and our backend.<br /><br />Another job was to
+            develop a strategy to ensure that the application keeps track of
+            contexts.
+          </div>
+          <div class="spacer--buttons">
+            <a
+              href="https://www.sprechender-beipackzettel.de/"
+              target="_blank"
+              class="button button--small button--flex"
+              >Read more here<i class="uil uil-external-link-alt button__icon"
+              ></i></a
+            >
+          </div>
+          <div class="container--flex mx-1">
+            <div>
+              <span class="general__modal-subtitle">Tech Stack</span>
+              <ul class="general__modal-experiments grid">
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Google Assitant</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Custom PHP-Backend</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <span class="general__modal-subtitle">Challenges</span>
+              <ul class="general__modal-experiments grid">
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Application Context</p>
+                </li>
+                <li class="general__modal-experiment">
+                  <i class="uil uil-check-circle general__modal-icon"></i>
+                  <p>Intent Detection</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal /-->
+  </section>
+</BaseLayout>

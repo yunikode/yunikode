@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/base.astro";
+---
+
+<BaseLayout>
+  <!--==================== ABOUT ====================-->
+  <section class="about section" id="about">
+    <div class="center__wrapper">
+      <h2 class="section__title">About Me</h2>
+      <span class="section__subtitle">What you should know about me</span>
+      <div class="about__container container grid">
+        <div class="about__img"></div>
+        <div class="about__data">
+          <p class="about__description">
+            I am driven by curiosity.<br /><br />I like to tinker and push the
+            envelope of what a piece of technology is capable of.<br /><br
+            />Sometimes I break things, but only to put them back in better
+            shape.<br /><br />I speak German and English at a native level.<br
+            /><br />Interests of mine outside the coding sphere:
+          </p>
+
+          <div class="about__info">
+            <div class="about__info-point">
+              <i class="uil uil-brain about__info-icon"></i>Philosophy
+            </div>
+            <div class="about__info-point">
+              <i class="uil uil-camera about__info-icon"></i>Photography
+            </div>
+            <div class="about__info-point">
+              <i class="uil uil-headphones-alt about__info-icon"></i>Sound
+              Design
+            </div>
+
+            <div class="about__info-point">
+              <i class="uil uil-dice-five about__info-icon"></i>Tabletop RPG
+            </div>
+            <div class="about__info-point">
+              <i class="uil uil-dumbbell about__info-icon"></i>Fitness
+            </div>
+          </div>
+          <div class="about__buttons">
+            <a download="" href="assets/pdf/cv.pdf" class="button button--flex">
+              Download CV <i class="uil uil-download-alt button__icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/base.astro";
+import Accordion from "../components/accordion.astro";
+---
+
+<BaseLayout>
+  <!--==================== SKILLS ====================-->
+  <section class="skills section" id="skills">
+    <div class="center__wrapper">
+      <h2 class="section__title">Skills</h2>
+      <span class="section__subtitle">Tech I wield</span>
+      <div class="skills__container container grid">
+        <div>
+          <Accordion icon="uil-brackets-curly" title="Frontend">
+            <div class="skills__data">
+              <h3 class="skills__name">Essentials</h3>
+              <span class="skills__desc">ES2015, HTML5, CSS3</span>
+            </div>
+            <div class="skills__data">
+              <h3 class="skills__name">Styled Components</h3>
+              <span class="skills__desc"
+                >Styled Components, Emotion, Stitches</span
+              >
+            </div>
+            <div class="skills__data">
+              <h3 class="skills__name">JS Frameworks</h3>
+              <span class="skills__desc">React, React Native, Gatsby</span>
+            </div>
+            <div
+              class="skills__data tooltip"
+              data-text="Built from scratch to enable multiple writing systems in the same component"
+            >
+              <h3 class="skills__name">Internationalization</h3>
+              <span class="skills__desc">API Developed in React</span>
+              <div class="skills__data-special"></div>
+            </div>
+          </Accordion>
+
+          <Accordion icon="uil-server-network" title="Backend / DevOps">
+            <div class="skills__data">
+              <h3 class="skills__name">Node JS</h3>
+              <span class="skills__desc">Build tools</span>
+            </div>
+            <div class="skills__data">
+              <h3 class="skills__name">PHP</h3>
+              <span class="skills__desc"
+                >WordPress plugins, webhook integration</span
+              >
+            </div>
+            <div class="skills__data">
+              <h3 class="skills__name">GitLab</h3>
+              <span class="skills__desc">Basic GitOps</span>
+            </div>
+            <div class="skills__data">
+              <h3 class="skills__name">DBs</h3>
+              <span class="skills__desc">MariaDB, PostgreSQL</span>
+            </div>
+          </Accordion>
+
+          <Accordion icon="uil-cloud-data-connection" title="CMS Integration">
+            <div class="skills__data">
+              <h3 class="skills__name">WordPress</h3>
+              <span class="skills__desc">Headless with GraphQL</span>
+            </div>
+            <div class="skills__data">
+              <h3 class="skills__name">Drupal</h3>
+              <span class="skills__desc">Headless with REST</span>
+            </div>
+            <div class="skills__data">
+              <h3 class="skills__name">AEM</h3>
+              <span class="skills__desc">React integration</span>
+            </div>
+            <div class="skills__data">
+              <h3 class="skills__name">SalesForce</h3>
+              <span class="skills__desc">Veeva & React integration</span>
+            </div>
+            <div class="skills__data">
+              <h3 class="skills__name">Contentful</h3>
+              <span class="skills__desc">NextJS with GraphQL</span>
+            </div>
+          </Accordion>
+
+          
+        </div>
+        <div class="skills__img-container">
+          <div class="skills__img"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

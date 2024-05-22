@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/base.astro";
+import Tile from "../elements/tile.astro";
+import { getCollection } from "astro:content";
+const experiments = await getCollection("experiments");
+---
+
+<BaseLayout>
+  <div x-data="{ open: false, key: null }">
+  <section class="experiments section" id="experiments">
+    <div class="center__wrapper">
+      <h2 class="section__title">Experiments</h2>
+      <span class="section__subtitle">Things on the Workbench</span>
+
+      <div class="experiments__container container grid">
+        
+        {experiments.map((experiment:any, _i) => (
+          <Tile experiment={experiment} key={_i}/>
+        ))}
+
+       
+
+        
+      </div>
+    </div>
+  </section>
+</div>
+</BaseLayout>

@@ -1,16 +1,56 @@
 ---
+import BaseLayout from "../layouts/base.astro";
 
+const title = "Homerpage";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <!--==================== HEADER ====================-->
+
+  <!--====================MAIN SECTION ====================-->
+  <div class="scroll__snap-wrapper">
+    <!--==================== HOME ====================-->
+    <section class="home section">
+      <div class="center__wrapper">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <div class="home__social">
+              <a
+                href="https://www.instagram.com/pink.n.kweer/"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-instagram-alt"></i>
+              </a>
+              <a
+                href="https://github.com/yunikode/"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-github"></i>
+              </a>
+            </div>
+
+            <div class="home__img"></div>
+
+            <div class="home__data">
+              <h1 class="home__title">
+                Hi, I'm Fiona
+              </h1>
+              <h3 class="home__subtitle">
+                Full-Stack Developer and ML-Aficionada
+              </h3>
+              <p class="home__description">
+                Jane of all trades, well versed in integrating different
+                technologies. Swears in multiple languages.
+              </p>
+              <a href="/about" class="button button--flex">
+                More About Me <i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

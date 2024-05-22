@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "yunikode-homepage",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.3.2",
     "@astrojs/check": "^0.3.4",
-    "astro": "^4.0.8",
+    "@astrojs/mdx": "^3.0.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@types/alpinejs": "^3.13.5",
+    "alpinejs": "^3.13.3",
+    "astro": "^4.2.1",
+    "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "daisyui": "^4.11.1"
   }
 }

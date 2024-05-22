@@ -1,0 +1,34 @@
+---
+const { experiment, key } = Astro.props;
+import Modal from "../components/modal.astro";
+---
+
+<div class="experiments__content">
+  <div>
+    <i class=`uil ${experiment.data.icon} experiments__icon`></i>
+    <h3 class="experiments__title">{experiment.data.title}</h3>
+  </div>
+
+  <span
+    class="button button--flex button--small button--link modal__button"
+  >
+    View More
+    <i class="uil uil-arrow-right button__icon"></i>
+  </span>
+  <Modal key={key}>
+    <h4 class="general__modal-title">{experiment.data.title}</h4>
+
+    <div class="container--flex">
+      <div class="grid">
+        <div class="general__modal-desc">
+          {experiment.data.description}
+        </div>
+
+        {experiment.body}
+      </div>
+      <div>
+        <div class="experiments__img-2"></div>
+      </div>
+    </div>
+  </Modal>
+</div>
